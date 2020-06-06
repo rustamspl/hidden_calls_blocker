@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.Intent;
 
 import android.telephony.TelephonyManager;
+import android.util.Log;
 
 import java.lang.reflect.Method;
 
@@ -13,13 +14,10 @@ public class IncomingCallReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-
         if ("android.intent.action.PHONE_STATE".equals(intent.getAction())) {
-
             try {
                 String state = intent.getStringExtra(TelephonyManager.EXTRA_STATE);
                 String number = intent.getExtras().getString(TelephonyManager.EXTRA_INCOMING_NUMBER);
-
                 if(state.equalsIgnoreCase(TelephonyManager.EXTRA_STATE_RINGING)){
                   this.endCallIfBlocked(context,number);
                 }else{
@@ -52,15 +50,10 @@ public class IncomingCallReceiver extends BroadcastReceiver {
     private void endCall(Context context){
         try {
             TelephonyManager tm = (TelephonyManager) context.getSystemService(Context.TELEPHONY_SERVICE);
-
             Method m1 = tm.getClass().getDeclaredMethod("getITelephony");
             m1.setAccessible(true);
             Object iTelephony = m1.invoke(tm);
-
-            Method m2 = iTelephony.getClass().getDeclaredMethod("silenceRinger");
             Method m3 = iTelephony.getClass().getDeclaredMethod("endCall");
-
-            m2.invoke(iTelephony);
             m3.invoke(iTelephony);
         } catch (Exception e) {
             e.printStackTrace();
