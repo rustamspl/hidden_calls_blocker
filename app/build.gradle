@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "io.github.rustamspl.hidden_calls_blockerer"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"

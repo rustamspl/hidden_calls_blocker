@@ -1,4 +1,4 @@
-package io.github.rustamspl.hidden_calls_blockerer;
+package io.github.rustamspl.hidden_calls_blocker;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
