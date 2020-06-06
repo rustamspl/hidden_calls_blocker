@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Hidden call blocker</string>
+    <string name="txt1">Will block calls from hidden numbers.</string>
+</resources>
