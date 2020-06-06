@@ -14,4 +14,4 @@ Tested One Plus 5 Android 8, 9
 
 ## Download
 
-[hidden_calls_blocker.apk v1.0.0](https://github.com/rustamspl/hidden_calls_blocker/releases/download/1.0.0/hidden_calls_blocker.apk) 
+[apk releases](https://github.com/rustamspl/hidden_calls_blocker/releases) 
