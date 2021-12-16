@@ -84,3 +84,4 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 !gradle/wrapper/gradle-wrapper.jar
+/app/release
